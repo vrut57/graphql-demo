@@ -1,0 +1,24 @@
+# mutation updateCourseTopic($id: Int!, $desc: String!) {
+#   updateFund(id: $id, desc: $desc) {
+#     desc
+#     id
+#   }
+# }
+
+# query getSingleFund($id: Int!) {
+#   fund(id: $id) {
+#     ticker
+#     id
+#     name
+#     desc
+#   }
+# }
+
+# {
+#   funds {
+#     ticker
+#     id
+#     desc
+#     name
+#   }
+# }
