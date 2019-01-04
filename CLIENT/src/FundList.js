@@ -19,13 +19,13 @@ export default class fundList extends React.Component {
     //   console.log(response);
     // });
 
-    fetch("http://127.0.0.1:4000/fund1", {
+    fetch("/fund1", {
       method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        // "Accept": "application/json",
-        "Origin": "http://localhost:3000"
-      }
+      // headers: {
+      //   "Content-Type": "application/json",
+      //   // "Accept": "application/json",
+      //   "Origin": "http://localhost:3000"
+      // }
     }).then(data => this.setState({ restData: data }));
   }
 

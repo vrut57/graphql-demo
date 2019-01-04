@@ -59,27 +59,27 @@ var root = {
   updateFund: updateFundDesc
 };
 
-var app = express();
-app.use(
-  "/graphql",
-  express_graphql({
-    schema: schema,
-    rootValue: root,
-    graphiql: true
-  })
-);
+module.exports = function(app) {
+  app.use(
+    "/graphql",
+    express_graphql({
+      schema: schema,
+      rootValue: root,
+      graphiql: true
+    })
+  );
 
-app.all("/fund1", (req, res) => {
-  res.header("Access-Control-Allow-Origin", "http://localhost:3000");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  res.json({
-    id: 1,
-    ticker: "APPL",
-    name: "Apple",
-    desc: "Apple computer company"
+  app.all("/fund1", (req, res) => {
+    res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+    res.header(
+      "Access-Control-Allow-Headers",
+      "Origin, X-Requested-With, Content-Type, Accept"
+    );
+    res.json({
+      id: 1,
+      ticker: "APPL",
+      name: "Apple",
+      desc: "Apple computer company"
+    });
   });
-});
-
-app.listen(4000, () =>
-  console.log("Express GraphQL running on localhost:4000/graphql")
-);
+};
