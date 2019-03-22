@@ -1,15 +1,28 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import FundList from "./FundList";
 
 import "./styles.css";
+import { GqlContainer, RestContainer } from './containers'
+import FundList from "./FundList";
+import GqlComponent from './GqlComponent';
+import RestComponent from './RestComponent';
 
 function App() {
   return (
-    <div className="App">
+    <>
       <h1>GraphQL Demo</h1>
-      <FundList />
-    </div>
+      <div className="comparison-container">
+      <GqlContainer>
+        <GqlComponent />
+      </GqlContainer>
+      <div>
+        Hello
+      </div>
+      <RestContainer>
+        <RestComponent />
+      </RestContainer>
+      </div>
+    </>
   );
 }
 
