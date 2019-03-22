@@ -15,9 +15,6 @@ function App() {
       <GqlContainer>
         <GqlComponent />
       </GqlContainer>
-      <div>
-        Hello
-      </div>
       <RestContainer>
         <RestComponent />
       </RestContainer>
