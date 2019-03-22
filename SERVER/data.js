@@ -86,7 +86,8 @@ let fundDataSrc1 = [
     {
       id: 1,
       ticker: "APPL",
-      name: "Apple"
+      name: "Apple",
+      desc: "a"
     },
     {
       id: 2,
@@ -198,7 +199,7 @@ let fundDataSrc2 = [{
 let fundDataSrc3 = [{
     id: 1,
     name: "Apple",
-    desc: "Apple computer company",
+    recommendation: "Buy",
   },
   {
     id: 2,
